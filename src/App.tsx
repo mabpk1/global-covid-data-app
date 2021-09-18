@@ -8,15 +8,17 @@ import { CountryType, FetchDataResponseType } from "./types";
 
 const GlobalStyle = createGlobalStyle`
   body{
-    color: white;
-    background-color: #afa6a6;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f74a4a;
+    background-color: #dff;
   }
 `;
 
 const Heading = styled.h1`
-  font-size: 45px;
+  font-size: 35px;
   text-decoration: underline;
   text-align: center;
+  margin-top: 35px;
   margin-bottom: 0;
 `;
 
