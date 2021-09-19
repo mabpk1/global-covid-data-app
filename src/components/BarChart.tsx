@@ -5,9 +5,23 @@ import styled from "styled-components";
 const ChartWrapper = styled.div`
   background-color: white;
   width: 700px;
-  margin: 0 auto;
   padding: 10px;
   margin-bottom: 45px;
+  @media (max-width: 480px) {
+    width: 340px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 480px) and (max-width: 768px) {
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 600px) and (max-width: 768px) {
+    width: 530px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 `;
 
 interface BarChartProps {

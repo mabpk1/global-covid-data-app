@@ -10,8 +10,22 @@ interface SelectCountryProps {
 
 const SelectWrapper = styled.div`
   width: 720px;
-  margin: 0 auto;
   color: black;
+
+  @media (max-width: 480px) {
+    width: 350px;
+    font-size: 15px;
+  }
+
+  @media (min-width: 480px) and (max-width: 600px) {
+    width: 420px;
+    font-size: small;
+  }
+
+  @media (min-width: 600px) and (max-width: 768px) {
+    width: 550px;
+    font-size: small;
+  }
 `;
 
 const SelectCountry: React.FC<SelectCountryProps> = ({
@@ -30,6 +44,7 @@ const SelectCountry: React.FC<SelectCountryProps> = ({
         options={options}
         isMulti
         closeMenuOnSelect={false}
+        placeholder="Select Country..."
         onChange={(countries: any) => {
           if (countries.length === 0) {
             handleClearAll();

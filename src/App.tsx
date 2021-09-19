@@ -7,10 +7,15 @@ import SelectCountry from "./components/SelectCountry";
 import { CountryType, FetchDataResponseType } from "./types";
 
 const GlobalStyle = createGlobalStyle`
-  body{
+  body {
     font-family: 'Courier New', Courier, monospace;
     color: #f74a4a;
     background-color: #dff;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px) {
+      margin-top: 25px;
+    }
   }
 `;
 
@@ -20,6 +25,11 @@ const Heading = styled.h1`
   text-align: center;
   margin-top: 35px;
   margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+    margin-top: 25px;
+  }
 `;
 
 const App: React.FC = () => {
